@@ -15,7 +15,7 @@ function HomePage() {
     <div className="container mt-5">
       <div className="text-center mb-4">
         <h1>Ders Notu Paylaşım Platformu</h1>
-        <p className="lead">Arkadaşlarınla üniversite ders notlarını ve faydalı kaynakları paylaş!</p>
+        
       </div>
       <div className="row">
         {courses.map(course => (
