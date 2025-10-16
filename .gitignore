@@ -1,0 +1,13 @@
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+/client/build
+
+# Env files
+.env
+
+# OS generated files
+.DS_Store
+npm-debug.log
