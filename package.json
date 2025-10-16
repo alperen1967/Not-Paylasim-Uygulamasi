@@ -1,0 +1,13 @@
+{
+  "name": "not-paylasma-sitesi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm:server\" \"npm:client\"",
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
