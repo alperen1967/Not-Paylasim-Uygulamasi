@@ -12,7 +12,14 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANO
 const app = express();
 const port = 3001;
 
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://not-paylasim-uygulamasi.vercel.app',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Use memory storage for multer because we are going to upload the file to Supabase directly
