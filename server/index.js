@@ -13,11 +13,17 @@ const app = express();
 const port = 3001;
 
 
+const whitelist = ['https://not-paylasim-uygulamasi.vercel.app'];
 const corsOptions = {
-  origin: 'https://not-paylasim-uygulamasi.vercel.app',
+  origin: function (origin, callback) {
+    if (!origin || whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   optionsSuccessStatus: 200
 };
-
 app.use(cors(corsOptions));
 
 app.use(express.json());
